@@ -1,10 +1,10 @@
 <dl>
 	<table>
 		<tr>
-			<td width="25%"><a href = "/index.md">Home</a></td>
-			<td width="25%"><a href = "/resume.md">Résumé</a></td>
-			<td width="25%"><a href = "/projects.md">Projects</a></td>
-			<td width="25%"><a href = "/dsa.md">Data Structures and Algorithms</a></td>
+			<td width="25%"><a href = "/index">Home</a></td>
+			<td width="25%"><a href = "/resume.pdf">Résumé</a></td>
+			<td width="25%"><a href = "/projects">Projects</a></td>
+			<td width="25%"><a href = "/dsa">Data Structures and Algorithms</a></td>
 		</tr>
 	</table>
 </dl>
@@ -354,6 +354,7 @@ def multDiv(s):
 def calculate(s): return sum([multDiv(x) for x in s.replace('-', '+-').split('+')])
 </pre>
 </details>
+<!---
 ### [Number of Digit One](https://leetcode.com/problems/number-of-digit-one)
 <details>
 <summary>Problem Statement</summary>
@@ -366,6 +367,7 @@ Given an integer <i>n</i>, count the total number of digit 1 appearing in all no
 <b>Explanation:</b> Digit 1 occurred in the following numbers: 1, 10, 11, 12, 13.
 </pre>
 </details>
+--->
 ### [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings)
 <details>
 <summary>Problem Statement</summary>
