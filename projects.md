@@ -2,12 +2,13 @@
 	<table>
 		<tr>
 			<td width="25%"><a href = "/index">Home</a></td>
-			<td width="25%"><a href = "/resume">Résumé</a></td>
+			<td width="25%"><a href = "/resume.pdf">Résumé</a></td>
 			<td width="25%"><a href = "/projects">Projects</a></td>
 			<td width="25%"><a href = "/dsa">Data Structures and Algorithms</a></td>
 		</tr>
 	</table>
 </dl>
+# Projects
 ### [Auto Auditor](https://github.com/ljeng/C2-Education/blob/master/auto_auditor.js)
 
 I wrote a JavaScript program that sorts billing events in chronological order and then uses binary search to find billing errors in business data in C2 Education’s Smart2 system. This significantly sped up the process of auditing business data and improved accuracy.
@@ -20,11 +21,11 @@ I devised an index fund trading algorithm based on an improved version of the cy
 ---
 ### [Self-Driving Car Simulator](https://www.dropbox.com/sh/1xuv6o85qmvh611/AADWSxHI7Q2jWb4U6QNHhmr2a?dl=0)
 
-I developed a model based on a dataset of millions of data points that tells us how much each life is worth based on a subject’s species, age, gender, criminal record, social status, pregnancy status, fitness level, and whether the subject is breaking the law (e.g. jaywalking) to use in life-or-death situations where a self-driving vehicle must value one set of lives over another. I wrote a Selenium script that automates simulations based on this model. I ran thousands of simulations on MIT’s Moral Machine, wrote the results to a CSV file, and analyzed them in Excel. I presented this project at the Recurse Center in August 2016.
+I developed a model based on a dataset of millions of data points that tells us how much each life is worth based on a subject’s species, age, gender, criminal record, social status, pregnancy status, fitness level, and whether the subject is breaking the law (e.g. jaywalking) to use in life-or-death situations where a self-driving vehicle must value one set of lives over another. I wrote a Selenium script that automates simulations based on this model. I ran thousands of simulations on MIT’s Moral Machine, wrote the results to a CSV file, and analyzed them in Excel. I presented this project at the Recurse Center in September 2016.
 
 ---
 ### [Ethical Engineering](https://www.dropbox.com/sh/2oj472d4o411kg8/AABbTodUT3u6ayjGrXSonKTNa)
-I talked about the process of constructing ethical frameworks for autonomous machines at the Recurse Center.
+I talked about the process of constructing ethical frameworks for autonomous machines at the Recurse Center in August 2016.
 
 ---
 ### [Advanced Add Reminder for Google Sheets](https://www.dropbox.com/home/Documents/Code?preview=bookProjectTrackerTemplate.js)
@@ -51,6 +52,7 @@ I drafted a three-view hand drawing and AutoCAD drawing of the Flying Dutchman, 
 ---
 ### [Open-Source Laser Cutter](http://dap.cooper.edu/doku.php?id=start:projects:cnclasercutter)
 Co-contributors: Calvin Ball, et al.
+
 Advisor: [Dr. Eric Lima](https://cooper.edu/engineering/people/eric-g-lima)
 
 We combined a laser cutter and a CNC milling machine to achieve the functional goal of cutting thin woods and plastics.
@@ -61,5 +63,6 @@ I simulated molecules in Spartan, a molecular modeling and computational chemist
 
 ---
 ### [Assessing Gait Impairment Following Experimental Traumatic Brain Injury in Mice](https://www.dropbox.com/s/jznttidki0gkuy3/neumann2009.pdf)
+Co-authors: Dr. Melanie Neumann, Dr. Yonggang Wang, Sharon Kim, Shwuhey M. Hong, Dr. Mehmet Bilgen, Dr. Jialing Liu
 
-To determine the effect of traumatic brain injury on gait function in adult mice, we assessed gait changes following the unilateral controlled cortical impact using a computer-assisted automated gait analysis system.
+To determine the effect of traumatic brain injury on gait function in adult mice, we assessed gait changes following the unilateral controlled cortical impact using a computer-assisted automated gait analysis system. This article was published in the *Journal of Neuroscience Methods* in 2009.
