@@ -1,37 +1,19 @@
-## Welcome to GitHub Pages
+<dl>
+	<table>
+		<tr>
+			<td width="25%"><a href = "/index">Home</a></td>
+			<td width="25%"><a href = "/resume">Résumé</a></td>
+			<td width="25%"><a href = "/projects">Projects</a></td>
+			<td width="25%"><a href = "/dsa">Data Structures and Algorithms</a></td>
+		</tr>
+	</table>
+</dl>
+Hi, I'm Lareine. I teach college-level computer science and a few other STEM subjects at C2 Education. As an educator, I'm interested in closing the gender disparity in computing by encouraging females to learn computer science and help them break barriers to career advancement. In professional and academic environments, I've done statistical modeling in various applications including computer-assisted gait analysis in stroke victims, computational chemistry, and the algorithms that control self-driving vehicles. I've also written code for personal use such as investing and optimizing credit card churning and the travel rewards earned from it. I studied engineering at Cooper Union on a full merit-based scholarship and then went on to complete a full batch at the Recurse Center. Before Cooper, I attended Webb Institute for naval architecture and marine engineering and competed on the co-ed varsity sailing team there.
+### Contact
+Phone: [908-379-8114](tel:908-379-8114)
 
-You can use the [editor on GitHub](https://github.com/ljeng/ljeng.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+E-mail: [ljeng@icloud.com](mailto:ljeng@icloud.com)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+GitHub: [ljeng](https://github.com/ljeng)
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ljeng/ljeng.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+LinkedIn: [ljeng](https://www.linkedin.com/in/ljeng)
