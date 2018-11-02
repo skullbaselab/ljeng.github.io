@@ -1,0 +1,41 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+a {
+  color: #6bb81e;
+  text-decoration: none;
+  &:hover {
+    color: #5f6407;
+    text-decoration: none;
+  }
+}
+
+.btn {
+  width: 200px;
+  height: 75px;
+  vertical-align: middle;
+	&:p {
+		vertical-align: middle;
+	}
+}
+
+img {
+  width: 20px;
+  height: 20px;
+}
+
+td {
+  width: 25%;
+}
+
+summary {
+  color: white;
+  background-color: #5c6e75;
+  opacity: 0.67;
+  padding: 16px;
+  &:hover {
+    opacity: 1;
+  }
+}
