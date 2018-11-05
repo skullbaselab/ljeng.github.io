@@ -12,7 +12,7 @@ I devised an index fund trading algorithm based on an improved version of the cy
 ### [*Titanic*: Machine Learning from Disaster](https://www.dropbox.com/sh/5hsq3c22vn3hm3h/AAARl9zrDcFKHgEvKAyayJrha)
 Co-contributor: [Dr. Ana Malagon](https://physics.yale.edu/people/ana-malagon)
 
-We completed an analysis of what sorts of people were likely to survive the sinking of the Titanic using the **k**-nearest neighbors algorithm.
+We completed an analysis of what sorts of people were likely to survive the sinking of the *Titanic* using the *k*-nearest neighbors algorithm.
 
 ---
 ### [Self-Driving Car Simulator](https://www.dropbox.com/sh/1xuv6o85qmvh611/AADWSxHI7Q2jWb4U6QNHhmr2a)
