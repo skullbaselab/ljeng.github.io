@@ -6,7 +6,7 @@ I wrote a JavaScript program that sorts billing events in chronological order an
 ---
 ### [Index Fund Trading Algorithm](https://github.com/ljeng/trading-algo)
 
-I devised an index fund trading algorithm based on an improved version of the cyclically adjusted price-to-earnings ratio combined with the Kelly criterion. I discovered that using 6-year moving average of earnings yields more accurate predictions than using the standard 10 years. According to simulations that I ran, this algorithm beats the market by 63%.
+I devised an index fund trading algorithm based on an improved version of the cyclically adjusted price-to-earnings ratio combined with the Kelly criterion. I discovered that using 18-year moving average of earnings yields more accurate predictions than using the standard 10 years.
 
 ---
 ### [*Titanic*: Machine Learning from Disaster](https://www.dropbox.com/sh/5hsq3c22vn3hm3h/AAARl9zrDcFKHgEvKAyayJrha)
