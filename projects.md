@@ -4,11 +4,6 @@
 I wrote a JavaScript program that sorts billing events in chronological order and then uses binary search to find billing errors in business data in C2 Education’s Smart2 system. This significantly sped up the process of auditing business data and improved accuracy.
 
 ---
-### [Index Fund Trading Algorithm](https://github.com/ljeng/trading-algo)
-
-I devised an index fund trading algorithm based on an improved version of the cyclically adjusted price-to-earnings ratio combined with the Kelly criterion. I discovered that using 18-year moving average of earnings yields more accurate predictions than using the standard 10 years.
-
----
 ### [*Titanic*: Machine Learning from Disaster](https://www.dropbox.com/sh/5hsq3c22vn3hm3h/AAARl9zrDcFKHgEvKAyayJrha)
 Co-contributor: [Dr. Ana Malagon](https://physics.yale.edu/people/ana-malagon)
 
