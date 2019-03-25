@@ -1,5 +1,5 @@
 # Data Structures and Algorithms
-I enjoy finding efficient, innovative solutions to data structure and algorithm problems, particularly ones that very few people have thought of previously. I have dedicated this page to showing how I arrived at these solutions.
+I do competitive programming and enjoy finding efficient, innovative solutions to data structure and algorithm problems. I have dedicated this page to sharing how I arrived at these solutions.
 ### [Wildcard Matching](https://leetcode.com/problems/wildcard-matching)
 <details markdown="1">
 <summary>Problem Statement</summary>
@@ -55,7 +55,7 @@ p = "a*c?b"
 </pre>
 </details>
 <details markdown="1">
-<summary>This Python 3 solution's runtime beats 93.83% of submissions.</summary>
+<summary>This Python 3 solution's runtime beats 91.74% of submissions.</summary>
 In this example, I'll walk through the test case:
 ```
 s = 'mississippi'
@@ -84,6 +84,7 @@ p = ['ss', '.i']
 For each substring in ```p```, we are to find that substring in ```s```. In addition, these substrings must be found in consecutive order and must not overlap.
 ```'ss'``` exists in ```s``` starting at index 2 and ending at index 3. A match for ```'.i'``` also exists in ```s```, starting at index 3 and ending at index 4. These are consecutive but they overlap, so it's not a match.
 ```python
+import re
 def isMatch(s, p):     
 	def popBoth(i):
 		while s and p and p[i] in ['?', s[i]]:
@@ -128,9 +129,10 @@ Given a collection of distinct integers, return all possible permutations.
 </pre>
 </details>
 <details markdown="1">
-<summary>This Python 3 solution's runtime beats 100.00% of submissions.</summary>
+<summary>This Python 3 solution's runtime beats 99.87% of submissions.</summary>
 Python has a built-in permutations iterator.
 ```python
+import itertools
 def permute(nums): return list(itertools.permutations(nums))
 ```
 </details>
@@ -163,7 +165,7 @@ Notes:
 </pre>
 </details>
 <details markdown="1">
-<summary>This Python 3 solution's runtime beats 99.82% of submissions.</summary>
+<summary>This Python 3 solution's runtime beats 98.81% of submissions.</summary>
 In this example, I'll walk through the test case:
 ```
 s = 'catsandog'
@@ -203,7 +205,7 @@ Given an integer array *nums*, find the contiguous subarray within an array (con
 </pre>
 </details>
 <details markdown="1">
-<summary>This Python 3 solution's runtime beats 100.00% of submissions.</summary>
+<summary>This Python 3 solution's runtime beats 99.91% of submissions.</summary>
 If *A* and *B* are integers and *B* = 0, then *AB* = 0. If *A* and *B* are integers and *B* != 0, then |*AB*| >= |*A*|. The longer the sequence of nonzero integers we multiply, the higher the absolute value of the product will be. But when that sequence is multiplied by 0, the product will become 0. Thus, to maximize the absolute value of the product of a subarray, we start from the beginning of the subarray and continue multiplying until the next number is 0.
 
 In this example, I'll walk through the test case [-2, 0, -1, -4, -3, 0, -2, 0, -4, -3, -2]. First, initialize a variable ```maximum``` to denote the maximum subarray product and set it to the first integer.
@@ -234,6 +236,7 @@ The next subarray [-2] can't be turned into a positve product. The last subarray
 
 An edge case where the answer is not ```maximum```is ```nums = [-2,0,-1]```. The split subarrays are ```[-2], [-1]]```. The products of the split subarrays are ```[-2, -1]```, and neither of can be turned positive. At this point, we have ```maximum = -2``` In this edge case, the maximum product is ```max([maximum] + nums)``` because 0 > ```maximum```.
 ```python
+import functools
 def maxProduct(nums):
 	if len(nums) == 1: return nums[0]
 	arr, subarray, maximum = [], [], nums[0]
@@ -244,7 +247,7 @@ def maxProduct(nums):
 			subarray = []
 	if subarray: arr += [subarray]
 	for subarray in arr:
-		product = functools.reduce(operator.mul, subarray, 1) if subarray else 0
+		product = functools.reduce(lambda x, y: x*y, subarray) if subarray else 0
 		if len(subarray) > 1 and product < 0:
 			i, n, a = 0, len(subarray), product
 			while i < len(subarray) and a < 0:
@@ -258,40 +261,6 @@ def maxProduct(nums):
 		else: maximum = max(maximum, product)
 	return max([maximum] + nums)
 ```
-</details>
-### [Maximum Gap](https://leetcode.com/problems/maximum-gap)
-<details markdown="1">
-<summary>Problem Statement</summary>
-Given an unsorted array, find the maximum difference between the successive elements in its sorted form.
-
-Return 0 if the array contains less than 2 elements.
-<br>
-**Example 1:**
-<pre>
-<b>Input:</b> [3,6,9,1]
-<b>Output:</b> 3
-<b>Explanation:</b> The sorted form of the array is [1,3,6,9].
-             Either (3,6) or (6,9) has the maximum difference 3.
-</pre>
-**Example 2:**
-<pre>
-<b>Input:</b> [10]
-<b>Output:</b> 0
-<b>Explanation:</b> The array contains less than 2 elements, therefore return 0.
-</pre>
-Notes:
-* You may assume all elements in the array are non-negative integers and fit in the 32-bit signed integer range.
-* Try to solve it in linear time/space.
-</details>
-<details markdown="1">
-<summary>This Python 3 solution's runtime beats 96.08% of submissions.</summary>
-I interpret "Try to solve it in linear time/space" as linear time *or* space. If this is the case, ```nums.sort()``` takes O(*n* log *n*) time but only O(*n*) space, so we could sort it and then find the maximum gap between the sorted values.
-```python
-def maximumGap(nums):
-	nums.sort()
-	return max([0] + [nums[i] - nums[i - 1] for i in range(1, len(nums))])
-```
-If we interpret "Try to solve it in linear time/space" as linear time *and* space, we could use radix sort instead of the built-in timsort.
 </details>
 ### [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree)
 <details markdown="1">
@@ -314,7 +283,7 @@ Notes:
 * All inputs are guaranteed to be non-empty strings.
 </details>
 <details markdown="1">
-<summary>This Python 3 solution's runtime beats 100.00% of submissions.</summary>
+<summary>This Python 3 solution's runtime beats 94.93% of submissions.</summary>
 <a href="https://leetcode.com/problems/implement-trie-prefix-tree/discuss/58832/AC-JAVA-solution-simple-using-single-array">Implementing a trie</a> would take O(1) time to initialize, O(*k* log *n*) time for ```insert```, O(*k*) time for ```search```, and O(*k*) time for ```startsWith```, where *k* is the number of letters in the word or prefix. I've written an accepted solution where I've used a single array instead of implementing an actual trie that takes O(1) time to initialize, O(*n*) time for ```insert```, O(log *n*) time for ```search``` and O(*k* + log *n*) time for ```startsWith```.
 An empty array is initialized.
 ```python
@@ -358,6 +327,7 @@ The bisection point of 'helloa' is 1 but index 1 is out of bounds, so return ```
 The bisection point of 'hello' is 0 and index 0 of ```self.arr``` starts with 'hello', so return ```True```.
 Although this solution uses more memory, in seconds it's much faster than the solution with the trie, and it's also something different that I wanted to share.
 ```python
+import bisect
 class Trie:
 	def __init__(self): self.arr = []
 	def insert(self, word): bisect.insort(self.arr, word)
@@ -396,7 +366,7 @@ Notes:
 * Do not use the ```eval``` built-in library function.
 </details>
 <details markdown="1">
-<summary>This Python 3 solution's runtime beats 100.00% of submissions.</summary>
+<summary>This Python 3 solution's runtime beats 99.85% of submissions.</summary>
 In this example, I'll walk through the test case ```s = '876-142-978*2/8+4/2*2+40*2+282/2-137+855'```. PEMDAS tells us to multiply and divide before we add and subtract, so split the string by ```+``` and ```-```.
 ```s.replace('-', '+-').split('+') = ['876', '-142', '-978*2/8', '4/2*2', '40*2', '282/2', '-137', '855']```
 Write a recursive function ```multDiv``` that evaluates a string containing only numbers and the operations ```*``` and ```/```. The string could also start with ```-``` to denote a negative result. If a string doesn't contain ```*``` and ```/```, convert that number into an integer.
@@ -416,6 +386,7 @@ Repeat the same process for the rest of the array, then find the sum.
 ```[multDiv(x) for x in s.replace('-', '+-').split('+')] = [876, -142, -244, 4, 80, 141, -137, 855]```
 ```sum([876, -142, -244, 4, 80, 141, -137, 855]) = 1433```
 ```python
+import functools
 def divide(x, y):
     a, b = int(x), int(y)
     quotient = a//b
@@ -429,71 +400,8 @@ def multDiv(s):
 	    a, b = int(multDiv(s[:i])), int(s[i + 1:])
 	    return a*b if s[i] == '*' else divide(a, b)
 	else: return functools.reduce(lambda x, y: int(x)*int(y), s.split('*'))
-    if '/' in s: return functools.reduce(divide, s.split('/'))
-    else: return int(s)
+    return functools.reduce(divide, s.split('/')) if '/' in s else int(s)
 def calculate(s): return sum([multDiv(x) for x in s.replace('-', '+-').split('+')])
-```
-</details>
-### [Number of Digit One](https://leetcode.com/problems/number-of-digit-one)
-<details markdown="1">
-<summary>Problem Statement</summary>
-Given an integer *n*, count the total number of digit 1 appearing in all non-negative integers less than or equal to *n*.
-<br>
-**Example:**
-<pre>
-<b>Input:</b> 13
-<b>Output:</b> 6 
-<b>Explanation:</b> Digit 1 occurred in the following numbers: 1, 10, 11, 12, 13.
-</pre>
-</details>
-<details markdown="1">
-<summary>This Python 3 solution's runtime beats 100.00% of submissions.</summary>
-If *n* < 0, there are no non-negative integers less than or equal to it, so the answer would be 0. In this example, I'll walk through the test case 3140. Convert *n* into a string and iterate through the string backwards. Initiate a variable ```quotient``` and set it equal to *n*. Every time you iterate through the string, divide ```quotient``` by 10. Let ```digit``` be the value of the digit you're working with.
-
-Zeroth iteration:
-```i = 0, quotient /= 10 = 314.0, digit = 0```
-Numbers <= 3140  with 1 in the ones place are 1, 11, 21...3111, 3121, 3131. There are 314 such numbers. To get 314 without counting, round ```quotient``` down because ```digit``` < 1, then multiply by 10<sup>i</sup>.
-```
-math.floor(quotient)*10**i = 314*1 = 314
-```
-First iteration:
-```
-i = 1, quotient /= 10 = 31.40, digit = 4
-```
-Numbers <= 3140 with 1 in the tens place are 11, 12, 13...17, 18, 19...3111, 3112, 3113...3117, 3118, 3119. There are 320 such numbers. To get 320, round ```quotient``` up because ```digit``` > 1, then multiply by 10<sup>i</sup>.
-```
-math.ceil(quotient)*10**i = 32*10 = 320
-```
-Second iteration:
-```
-i = 2, quotient /= 10 = 3.140, digit = 1
-```
-Numbers <= 3140 with 1 in the hundreds place are 100, 101, 102...197, 198, 199...2100, 2101, 2102...2197, 2198, 2199...3100, 3101, 3102...3138, 3139, 3140. There are 300 such numbers < 3100. To get 300, round ```quotient``` down because ```digit``` = 1, then multiply by 10<sup>i</sup>. Since the digit is 1, we also have to count numbers between 3100 and 3140 inclusive. There are 41 of those. To get 41, take the string to the right of '1', turn it into an integer, and add 1. There are a total of 341 numbers <= 3140 with 1 in the hundreds place. 
-```
-math.floor(quotient)*10**i + int(str(n)[-i:]) = 3*100 + 40 + 1 = 341
-```
-Third iteration:
-```
-i = 3, quotient /= 10 = 0.3140, digit = 3
-```
-Numbers <= 130 with 1 in the thousands place are 1000, 1001, 1002...1997, 1998, 1999. There are 1000 such numbers. To get 1000, round ```quotient``` up because ```digit``` > 1, then multiply by 10<sup>i</sup>.
-```
-math.ceil(quotient)*10**i = 1*1000 = 1000
-```
-There are 314 + 320 + 341 + 1000 = 1975 digit ones in numbers <= 3140.
-```python
-def countDigitOne(n):
-	if n < 0: return 0
-	s, quotient, counter = str(n), n, 0
-	for i in range(len(s)):
-		quotient /= 10
-		digit = int(s[-i - 1])
-		product = 10**i*(math.ceil(quotient) if digit > 1 else math.floor(quotient))
-		if digit == 1:
-			if i: product += int(s[-i:])
-			product += 1
-		counter += product
-	return counter
 ```
 </details>
 ### [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings)
@@ -518,7 +426,7 @@ The substrings with different start indexes or end indexes are counted as differ
 Note: The input string length won't exceed 1000.
 </details>
 <details markdown="1">
-<summary>This Python 3 solution's runtime beats 93.72% of submissions.</summary>
+<summary>This Python 3 solution's runtime beats 90.03% of submissions.</summary>
 An odd-length palindrome has a center character that is a palindrome. ```s = 'bedededeb'``` is an odd-length palindrome with center character 'd' at index 4. If you radiate outward, you find that the letters on opposite sides of the center are always the same:
 ```
 s[3] = s[5] = 'e'
