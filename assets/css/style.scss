@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+main#content {
+  max-width: 128rem;
+}
+
 a {
   color: #6bb81e;
   text-decoration: none;
@@ -21,21 +25,16 @@ a {
 	}
 }
 
+tr {
+	color:white;
+}
+
 img {
   width: 20px;
   height: 20px;
 }
 
-summary {
-  color: white;
-  background-color: #5c6e75;
-  opacity: 0.67;
-  padding: 16px;
-  &:hover {
-    opacity: 1;
-  }
-}
-
-main#content {
-  max-width: 128rem;
+.head-shot {
+	width: 512px;
+	height: 384px;
 }
