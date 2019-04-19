@@ -1,5 +1,5 @@
 # Projects
-### [Auto Auditor](https://github.com/ljeng/C2-Education/blob/master/auto_auditor.js)
+### [Auto Auditor](https://github.com/ljeng/c2-education/blob/master/auto_auditor.js)
 
 I wrote a JavaScript program that sorts billing events in chronological order and then uses binary search to find billing errors in business data in C2 Education’s Smart2 system. This significantly sped up the process of auditing business data and improved accuracy.
 
