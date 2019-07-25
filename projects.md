@@ -19,11 +19,6 @@ I developed a model based on a dataset of millions of data points that tells us 
 I talked about the process of constructing ethical frameworks for autonomous machines at the [Recurse Center in August 2016](https://presentations.recurse.com/?date=1472101200000).
 
 ---
-### [Advanced Add Reminder for Google Sheets](/files/bookProjectTrackerTemplate.js)
-
-I wrote a Google Apps Script that works with a complex project management spreadsheet. The script sends an email reminder to team members two days before an assignment is due, CC's the email to the coordinator, and maintains a file of all emails sent.
-
----
 ### [Design and Construction of a Bridge](https://www.dropbox.com/sh/4rur7rilr98wmun/AADQN-pmft81kDrKV-xNcGisa)
 Co-authors: Daniel Gologorskiy, Jorge Olaso
 
