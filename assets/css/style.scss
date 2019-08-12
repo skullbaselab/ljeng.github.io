@@ -7,13 +7,9 @@ main#content {
   max-width: 128rem;
 }
 
-a {
-  color: #6bb81e;
-  text-decoration: none;
-  &:hover {
-    color: #5f6407;
-    text-decoration: none;
-  }
+.page-header {
+	background-color: #000000;
+	background-image: none;
 }
 
 .btn {
@@ -25,6 +21,10 @@ a {
 	}
 }
 
+.bio {
+	text-align: right;
+}
+
 img {
   width: 20px;
   height: 20px;
@@ -33,4 +33,34 @@ img {
 .head-shot {
 	width: 512px;
 	height: 384px;
+}
+
+@media only screen and (max-width: 768px) {
+	.btn {
+		width: 100%;
+	}
+	
+	.bio {
+		text-align: left;
+	}
+	
+	td {
+		width: 100%;
+	}
+	
+	tr {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	
+	.contact {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.head-shot {
+		width: 100%;
+		height: auto;
+	}
 }
